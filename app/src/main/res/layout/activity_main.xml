@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+ <!--   <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_margin="20dp"
+            android:background="@color/white"
+            android:padding="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/nested_scroll_text"/>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+        &lt;!&ndash;<ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:contentDescription="@string/no_image"
+            android:src="@drawable/heart"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:contentDescription="@string/no_image"
+            android:src="@drawable/heart"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:contentDescription="@string/no_image"
+            android:src="@drawable/heart"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:contentDescription="@string/no_image"
+            android:src="@drawable/heart"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:contentDescription="@string/no_image"
+            android:src="@drawable/heart"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:contentDescription="@string/no_image"
+            android:src="@drawable/heart"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:contentDescription="@string/no_image"
+            android:src="@drawable/heart"/>&ndash;&gt;
+
+    </LinearLayout>-->
+
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_name1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Hot Movie"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints" />
+
+            <HorizontalScrollView
+                android:id="@+id/horizontalScrollView"
+                android:layout_width="409dp"
+                android:layout_height="206dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_name1">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageButton
+                        android:id="@+id/image1"
+                        android:layout_width="120dp"
+                        android:layout_height="170dp"
+                        android:src="@drawable/heart"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="MissingConstraints" />
+
+                    <ImageButton
+                        android:id="@+id/image2"
+                        android:layout_width="120dp"
+                        android:layout_height="170dp"
+                        android:layout_marginStart="15dp"
+                        android:src="@drawable/heart"
+                        app:layout_constraintStart_toEndOf="@id/image1"
+                        app:layout_constraintTop_toTopOf="@id/image1"
+                        tools:ignore="MissingConstraints" />
+
+                    <ImageButton
+                        android:id="@+id/image3"
+                        android:layout_width="120dp"
+                        android:layout_height="170dp"
+                        android:layout_marginStart="15dp"
+                        android:src="@drawable/heart"
+                        app:layout_constraintStart_toEndOf="@+id/image2"
+                        app:layout_constraintTop_toTopOf="@+id/image2"
+                        tools:ignore="MissingConstraints" />
+
+                    <ImageButton
+                        android:id="@+id/image4"
+                        android:layout_width="120dp"
+                        android:layout_height="170dp"
+                        android:layout_marginStart="15dp"
+                        android:src="@drawable/heart"
+                        app:layout_constraintStart_toEndOf="@+id/image3"
+                        app:layout_constraintTop_toTopOf="@+id/image3"
+                        tools:ignore="MissingConstraints" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </HorizontalScrollView>
+
+            <TextView
+                android:id="@+id/tv_name2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Hot Movie2"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView"
+                tools:ignore="MissingConstraints" />
+
+            <HorizontalScrollView
+                android:id="@+id/horizontalScrollView2"
+                android:layout_width="409dp"
+                android:layout_height="206dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_name2">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageButton
+                        android:id="@+id/image5"
+                        android:layout_width="120dp"
+                        android:layout_height="170dp"
+                        android:src="@drawable/heart"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="MissingConstraints" />
+
+                    <ImageButton
+                        android:id="@+id/image6"
+                        android:layout_width="120dp"
+                        android:layout_height="170dp"
+                        android:layout_marginStart="15dp"
+                        android:src="@drawable/heart"
+                        app:layout_constraintStart_toEndOf="@id/image5"
+                        app:layout_constraintTop_toTopOf="@id/image5"
+                        tools:ignore="MissingConstraints" />
+
+                    <ImageButton
+                        android:id="@+id/image7"
+                        android:layout_width="120dp"
+                        android:layout_height="170dp"
+                        android:layout_marginStart="15dp"
+                        android:src="@drawable/heart"
+                        app:layout_constraintStart_toEndOf="@+id/image6"
+                        app:layout_constraintTop_toTopOf="@+id/image6"
+                        tools:ignore="MissingConstraints" />
+
+                    <ImageButton
+                        android:id="@+id/image8"
+                        android:layout_width="120dp"
+                        android:layout_height="170dp"
+                        android:layout_marginStart="15dp"
+                        android:src="@drawable/heart"
+                        app:layout_constraintStart_toEndOf="@+id/image7"
+                        app:layout_constraintTop_toTopOf="@+id/image7"
+                        tools:ignore="MissingConstraints" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </HorizontalScrollView>
+
+            <TextView
+                android:id="@+id/tv_name3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Hot Movie"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView2"
+                tools:ignore="MissingConstraints" />
+
+            <HorizontalScrollView
+                android:id="@+id/horizontalScrollView3"
+                android:layout_width="409dp"
+                android:layout_height="206dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_name3">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageButton
+                        android:id="@+id/image9"
+                        android:layout_width="120dp"
+                        android:layout_height="170dp"
+                        android:src="@drawable/heart"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="MissingConstraints" />
+
+                    <ImageButton
+                        android:id="@+id/image10"
+                        android:layout_width="120dp"
+                        android:layout_height="170dp"
+                        android:layout_marginStart="15dp"
+                        android:src="@drawable/heart"
+                        app:layout_constraintStart_toEndOf="@id/image9"
+                        app:layout_constraintTop_toTopOf="@id/image9"
+                        tools:ignore="MissingConstraints" />
+
+                    <ImageButton
+                        android:id="@+id/image11"
+                        android:layout_width="120dp"
+                        android:layout_height="170dp"
+                        android:layout_marginStart="15dp"
+                        android:src="@drawable/heart"
+                        app:layout_constraintStart_toEndOf="@+id/image10"
+                        app:layout_constraintTop_toTopOf="@+id/image10"
+                        tools:ignore="MissingConstraints" />
+
+                    <ImageButton
+                        android:id="@+id/image12"
+                        android:layout_width="120dp"
+                        android:layout_height="170dp"
+                        android:layout_marginStart="15dp"
+                        android:src="@drawable/heart"
+                        app:layout_constraintStart_toEndOf="@+id/image11"
+                        app:layout_constraintTop_toTopOf="@+id/image11"
+                        tools:ignore="MissingConstraints" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </HorizontalScrollView>
+
+            <TextView
+                android:id="@+id/tv_name4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Hot Movie2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView3"
+                tools:ignore="MissingConstraints" />
+
+            <HorizontalScrollView
+                android:id="@+id/horizontalScrollView4"
+                android:layout_width="409dp"
+                android:layout_height="206dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_name4">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageButton
+                        android:id="@+id/image13"
+                        android:layout_width="120dp"
+                        android:layout_height="170dp"
+                        android:src="@drawable/heart"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="MissingConstraints" />
+
+                    <ImageButton
+                        android:id="@+id/image14"
+                        android:layout_width="120dp"
+                        android:layout_height="170dp"
+                        android:layout_marginStart="15dp"
+                        android:src="@drawable/heart"
+                        app:layout_constraintStart_toEndOf="@id/image13"
+                        app:layout_constraintTop_toTopOf="@id/image13"
+                        tools:ignore="MissingConstraints" />
+
+                    <ImageButton
+                        android:id="@+id/image15"
+                        android:layout_width="120dp"
+                        android:layout_height="170dp"
+                        android:layout_marginStart="15dp"
+                        android:src="@drawable/heart"
+                        app:layout_constraintStart_toEndOf="@+id/image14"
+                        app:layout_constraintTop_toTopOf="@+id/image14"
+                        tools:ignore="MissingConstraints" />
+
+                    <ImageButton
+                        android:id="@+id/image16"
+                        android:layout_width="120dp"
+                        android:layout_height="170dp"
+                        android:layout_marginStart="15dp"
+                        android:src="@drawable/heart"
+                        app:layout_constraintStart_toEndOf="@+id/image15"
+                        app:layout_constraintTop_toTopOf="@+id/image15"
+                        tools:ignore="MissingConstraints" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </HorizontalScrollView>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
